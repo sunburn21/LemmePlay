@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: #eee;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* =======================navbar====================== */
+nav{
+    display: flex;
+    
+    justify-content: space-between;
+    /* height: 8vh; */
+    height: 8vh;
+    background: #fff;
+    align-items: center;
+    color: #FF5722;
+    font-family: Righteous;
+    font-size: 1.5em;
+    letter-spacing: 2;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    padding: 4px;
+    
+}
+.right>a{
+    padding: 5px;
+    margin: 10px;
+}
+
+span{
+    padding: 8px;
+}
+/* i.fa-play-circle{
+    color: black;
+} */
+/* .nav{
+    position: fixed;
+} */
+/* .header{
+    text-align: center;
+    height: 10vh;
+    background: white;
+} */
+/* .right{
+    float: right;
+    margin-right: 10px;
+    padding-top: 14px;
+    font-family: Righteous;
+    font-size: 1.5em;
+    color: #FF5722;
+    letter-spacing: 2;
+} */
+
+/* .logo{
+    margin-left: 10px;
+    padding-top: 14px;
+    font-family: Righteous;
+    font-size: 1.5em;
+    color: #FF5722;
+    letter-spacing: 2;
+} */
+/* .mid{
+    margin: auto auto;
+    width: 100vw;
+    
+    height: 60vh;
+    background: white;
+} */
+.text{
+    margin: 20px auto;
+    
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-family: Rammetto One;
+}
+
+.btn {
+    font-family: Cambria;
+    outline: none;
+    border: none; 
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background: #FF5722;
+    font-size: 70px;
+    font-weight: 300px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 40px 85px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px #b71c1c;
+
+    }
+
+.btn:hover{
+    box-shadow: 0 4px #b71c1c;
+    top: 2px;
+  
+
+}
+
+.btn:active{
+    box-shadow: 0 0px #b71c1c;
+    top: 6px;
+  
+
+}
+/*===================================================choices==========================================================*/
+.container{
+    margin: 110px 120px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.choice{
+    background: #FF5722;
+    font-family: Righteous;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    background: #eee;
+    border: 2px solid #b71c1c;
+    color: #000;
+    text-shadow: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.choice:hover {
+    color: white;
+    background: #FF5722;
+  }
+
+.active{
+    color: white;
+    background: #FF5722;
+}
+
+/* ==================================================Modals============================================================ */
+
+.modal-bg{
+    width: 100%;
+    height: 92vh;
+    
+    background: rgba(44,62,80 ,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8vh;
+}
+/* ======================================================================================================== */
+
+.nav-active{
+    color: white;
+    border: 2px solid #b71c1c;
+    background: #FF5722;
+    border-radius: 5px;
+}
+
+.modal-content{
+    width: 60%;
+    height: 80%;
+    background: #eee;
+    border: 4px solid #b71c1c;
+    border-radius: 1%;
+    position: relative;
+
+
+}
+.heading{
+    width: 100%;
+    background: #FF5722;
+    height: 15%;
+    border-radius: 1%;
+    text-align: center;
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+        
+}
+
+a.abouttitle{
+    color: white;
+    font-family: Righteous;
+    font-size: 2em;
+    top: 30px;
+}
+
+.heading>.close{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-size: 2em;
+}
+
+span>i{
+    color: black;
+}
+p{
+    font-size: 1.5em;
+    padding-top: 10px;
+    
+}
+
+#about-content{
+    padding: 5px;
+}
+
+.nav-btn:hover{
+    color: white;
+    border: 2px solid #b71c1c;
+    background: #FF5722;
+    border-radius: 5px;
+}
+
+.nav-btn{
+    transition: 0.2s 0s ease-in-out ;
+}
+
+i{
+    cursor: pointer;
+}

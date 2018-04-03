@@ -2,6 +2,9 @@ $(document).ready(function () {
     var buttons = document.querySelectorAll(".choice");
     var category;
     var about = document.querySelector("#aboutus");
+    document.querySelector("#close-video").addEventListener("click",()=>{
+        document.querySelector(".modal-video").style.display="none";
+    });
     about.addEventListener("click",()=>{
         document.querySelector("#about").style.display= "flex";
         about.classList.add("nav-active");
@@ -22,8 +25,8 @@ $(document).ready(function () {
             $.getJSON(`/api/videos/${category}`)
             .then(function(allvideos){
                 var num=Math.floor(Math.random()*allvideos.length);
-                playurl=allvideos[num].link
-                console.log(playurl);
+                id=allvideos[num].id
+                console.log(id);
             })
             .catch(function(err){
                 console.log(err);
@@ -33,31 +36,14 @@ $(document).ready(function () {
     })
     
     
-    $("#add").on("click",function(){
-        addVideo();
-    });
-
     
     $(".btn").on("click",()=>{
      
-        window.open(playurl,'_blank');
+        document.querySelector(".modal-video").style.display="flex";
+        document.querySelector(".video").src=`https://www.youtube.com/embed/${id}`;
     });
    
 });
-var playurl;
-function addVideo(){
-    var link = $("#link").val();
-    var category = $("select").val()
-    $.post("api/videos",{link: link,category: category})
-    .then(function(newVideo){
-        $("#link").val("");
-        
-        console.log(newVideo);
-    })
-    .catch(function(err){
-        alert("ERROR IN THE POST REQUEST");
-        console.log(err);
-    })
-}
+var id;
 
 

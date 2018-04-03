@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var videoSchema = new mongoose.Schema({
-    link:{
+    id:{
         type:String,
         required: "link cannot be empty"
     },

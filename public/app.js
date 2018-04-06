@@ -4,6 +4,7 @@ $(document).ready(function () {
     var about = document.querySelector("#aboutus");
     document.querySelector("#close-video").addEventListener("click",()=>{
         document.querySelector(".modal-video").style.display="none";
+        document.querySelector(".video").src=``;
     });
     about.addEventListener("click",()=>{
         document.querySelector("#about").style.display= "flex";
@@ -38,9 +39,14 @@ $(document).ready(function () {
     
     
     $(".btn").on("click",()=>{
-     
-        document.querySelector(".modal-video").style.display="flex";
-        document.querySelector(".video").src=`https://www.youtube.com/embed/${id}`;
+        document.querySelector(".loading").style.display="flex";
+        setTimeout(() => {
+            document.querySelector(".modal-video").style.display="flex";
+            document.querySelector(".loading").style.display="none";
+            document.querySelector(".video").src=`https://www.youtube.com/embed/${id}`;
+        }, 3000);
+        // document.querySelector(".modal-video").style.display="flex";
+        // document.querySelector(".video").src=`https://www.youtube.com/embed/${id}`;
     });
    
 });

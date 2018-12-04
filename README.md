@@ -1,2 +1,2 @@
 # LemmePlay
-### Play a random vedio from handpicked vedio collections
+### Play a random video from handpicked video collections

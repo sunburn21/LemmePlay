@@ -18,7 +18,7 @@ app.get("/admin",function(req,res){
 
 
 
-
+//listening at port 3000
 app.listen(3000,function(){
     console.log("App has started!");
 });
